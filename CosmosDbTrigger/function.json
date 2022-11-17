@@ -1,0 +1,22 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "accountcosmosdb-crypto-poc",
+      "databaseName": "crypto-details",
+      "collectionName": "crypto",
+      "createLeaseCollectionIfNotExists": true
+    },
+    {
+      "type": "signalR",
+      "name": "signalRMessages",
+      "hubName": "serverless",
+      "connectionStringSetting": "AzureSignalRConnectionString",
+      "direction": "out"
+    }
+  ]
+}
